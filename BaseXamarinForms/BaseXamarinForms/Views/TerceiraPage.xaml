@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Terceira}">
             <Button
-                        BackgroundColor="Black"
+                        BackgroundColor="PowderBlue"
                         BorderRadius="23"
                         Command="{Binding TerceiraCommand}"
                         HeightRequest="46"
