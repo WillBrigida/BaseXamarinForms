@@ -1,9 +1,4 @@
-﻿using BaseXamarinForms.Infrastructure;
-using BaseXamarinForms.Views;
-using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BaseXamarinForms.Views;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -11,23 +6,17 @@ namespace BaseXamarinForms.ViewModels
 {
     public class LoginViewModel
     {
-        public ICommand LoginCommand
+        public ICommand LoginCommand { get;}
+
+        public LoginViewModel()
         {
-            get
-            {
-                return new RelayCommand(Login);
-            }
+            LoginCommand = new Command(Login);
         }
 
         private async void Login()
         {
-
-
-            MainViewModel.GetInstance().Produto = new ProdutoViewModel();
+            MainViewModel.GetInstance().Primeira = new PrimeiraViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new ProdutoPage());
-
-            
         }
-
     }
 }

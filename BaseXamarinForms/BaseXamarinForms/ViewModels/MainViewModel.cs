@@ -1,27 +1,29 @@
-﻿using BaseXamarinForms.ViewModels;
-
-namespace BaseXamarinForms.Infrastructure
+﻿namespace BaseXamarinForms.ViewModels
 {
     public class MainViewModel
     {
         #region Propriedade
         public LoginViewModel Login { get; set; }
-        public ProdutoViewModel Produto { get; set; }
+        public PrimeiraViewModel Primeira { get; set; }
         public SegundaViewModel Segunda { get; set; }
         public TerceiraViewModel Terceira { get; set; }
-        public PopViewModel Pop { get; set; }
+        public ModalViewModel Modal { get; set; }
+
         #endregion
+
 
         #region Construtor
         public MainViewModel()
         {
             this.Login = new LoginViewModel();
-            this.Produto = new ProdutoViewModel();
+            this.Primeira = new PrimeiraViewModel();
             this.Segunda = new SegundaViewModel();
             this.Terceira = new TerceiraViewModel();
-            this.Pop = new PopViewModel();
+            this.Modal = new ModalViewModel();
+            
         }
         #endregion
+
 
         #region MyRegion
         private static MainViewModel instance;

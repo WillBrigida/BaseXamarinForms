@@ -19,6 +19,5 @@
                 </Button>
             </StackLayout>
         </ScrollView>
-        
     </ContentPage.Content>
 </ContentPage>

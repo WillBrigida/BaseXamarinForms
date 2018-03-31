@@ -1,9 +1,4 @@
-﻿using BaseXamarinForms.Infrastructure;
-using BaseXamarinForms.Views;
-using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BaseXamarinForms.Views;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -11,22 +6,25 @@ namespace BaseXamarinForms.ViewModels
 {
     public class SegundaViewModel
     {
-        public ICommand SegundaCommand
-        {
-            get
-            {
-                return new RelayCommand(Segunda);
-            }
-        }
+        #region Propriedades
+        public ICommand SegundaCommand { get; }
+        #endregion
 
+
+        #region Construtor
+        public SegundaViewModel()
+        {
+            SegundaCommand = new Command(Segunda);
+        }
+        #endregion
+
+
+        #region Método
         private async void Segunda()
         {
-
-
             MainViewModel.GetInstance().Terceira = new TerceiraViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new TerceiraPage());
-
-
         }
+        #endregion
     }
 }

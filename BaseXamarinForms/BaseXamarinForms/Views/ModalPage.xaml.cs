@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseXamarinForms.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace BaseXamarinForms.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PopPage : ContentPage
+	public partial class ModalPage : ContentPage
 	{
-		public PopPage ()
+		public ModalPage ()
 		{
 			InitializeComponent ();
 		}

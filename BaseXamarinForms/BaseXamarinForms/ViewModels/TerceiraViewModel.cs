@@ -1,25 +1,27 @@
-﻿using BaseXamarinForms.ViewModels;
-using BaseXamarinForms.Views;
-using GalaSoft.MvvmLight.Command;
+﻿using BaseXamarinForms.Views;
+using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace BaseXamarinForms.Infrastructure
+namespace BaseXamarinForms.ViewModels
 {
     public class TerceiraViewModel
     {
-        public ICommand TerceiraCommand
+        #region Propriedade
+        public ICommand TerceiraCommand { get; set; }
+        #endregion
+
+        #region Construtor
+        public TerceiraViewModel()
         {
-            get
-            {
-                return new RelayCommand(Terceira);
-            }
+            TerceiraCommand = new Command(Terceira);
         }
 
         private async void Terceira()
         {
-            MainViewModel.GetInstance().Pop = new PopViewModel();
-            await Application.Current.MainPage.Navigation.PushModalAsync(new PopPage());
+            MainViewModel.GetInstance().Modal = new ModalViewModel();
+            await Application.Current.MainPage.Navigation.PushModalAsync(new ModalPage());
         }
+        #endregion
     }
 }
