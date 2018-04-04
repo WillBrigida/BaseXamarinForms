@@ -13,3 +13,5 @@
     
     
     <!--A aplicação inicia por aqui-->
+    <!--Referenciar a classe Locator-->
+<!--Quando chama o OBJETO INFRA , e chamado em BaseXamarinForms.Infrastructure-->

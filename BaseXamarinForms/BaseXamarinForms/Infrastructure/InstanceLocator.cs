@@ -2,6 +2,9 @@
 
 namespace BaseXamarinForms.Infrastructure
 {
+    // Tem a finalidade de encontrar a MainViewModel 
+    //Ligar as páginas à MainViewModel
+    //No dicionário de recurso esta classe é referenciada
     public class InstanceLocator
     {
         #region Propriedade

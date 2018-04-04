@@ -15,8 +15,8 @@ namespace BaseXamarinForms.ViewModels
 
         private async void Login()
         {
-            MainViewModel.GetInstance().Primeira = new PrimeiraViewModel();
-            await Application.Current.MainPage.Navigation.PushAsync(new ProdutoPage());
+            MainViewModel.GetInstance().Produtos = new ProdutosViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new ProdutosPage());
         }
     }
 }

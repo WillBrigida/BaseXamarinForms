@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BaseXamarinForms.Views.ProdutosPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Lista de Produtos">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Produtos}">
+            <ListView
+                
+                SeparatorVisibility="Default"
+                HasUnevenRows="False"
+                IsVisible="True"
+                ItemsSource="{Binding Produtos}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectCommand}"/>
+                                </StackLayout.GestureRecognizers>
+                                <StackLayout Padding="10,10,10,10">
+                                    <Label Text="{Binding NomeProduto}" FontSize="Medium">
+                                    </Label>
+                                </StackLayout>  
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,6 +6,8 @@
              Title="SegundaPage" >
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Segunda}">
+            
+            
             <Button
                      BackgroundColor="Black"
                      BorderRadius="23"

@@ -11,11 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace BaseXamarinForms.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class ProdutosPage : ContentPage
 	{
-		public LoginPage ()
+		public ProdutosPage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
 		}
 	}
 }

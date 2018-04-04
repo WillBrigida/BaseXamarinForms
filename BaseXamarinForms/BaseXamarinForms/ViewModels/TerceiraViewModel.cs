@@ -7,8 +7,10 @@ namespace BaseXamarinForms.ViewModels
 {
     public class TerceiraViewModel
     {
+       
         #region Propriedade
         public ICommand TerceiraCommand { get; set; }
+       
         #endregion
 
         #region Construtor
@@ -16,6 +18,8 @@ namespace BaseXamarinForms.ViewModels
         {
             TerceiraCommand = new Command(Terceira);
         }
+
+        
 
         private async void Terceira()
         {

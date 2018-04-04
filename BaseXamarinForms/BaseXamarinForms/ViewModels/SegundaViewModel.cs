@@ -1,10 +1,13 @@
-﻿using BaseXamarinForms.Views;
+﻿using BaseXamarinForms.Models;
+using BaseXamarinForms.Views;
+using System;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace BaseXamarinForms.ViewModels
 {
-    public class SegundaViewModel
+    public class SegundaViewModel : BaseViewModel
     {
         #region Propriedades
         public ICommand SegundaCommand { get; }
@@ -23,6 +26,7 @@ namespace BaseXamarinForms.ViewModels
         private async void Segunda()
         {
             MainViewModel.GetInstance().Terceira = new TerceiraViewModel();
+            Console.WriteLine("Teste");
             await Application.Current.MainPage.Navigation.PushAsync(new TerceiraPage());
         }
         #endregion

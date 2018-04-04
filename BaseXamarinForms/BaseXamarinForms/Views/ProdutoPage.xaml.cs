@@ -1,4 +1,4 @@
-﻿using BaseXamarinForms.ViewModels;
+﻿using BaseXamarinForms.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace BaseXamarinForms.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class ProdutoPage : ContentPage
 	{
-		public LoginPage ()
+		public ProdutoPage ()
 		{
 			InitializeComponent ();
 		}

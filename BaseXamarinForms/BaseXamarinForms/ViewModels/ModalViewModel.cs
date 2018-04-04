@@ -1,12 +1,13 @@
-﻿using System.Windows.Input;
+﻿using BaseXamarinForms.Models;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace BaseXamarinForms.ViewModels
 {
     public class ModalViewModel
     {
-       
         #region Propriedade
+      
         public ICommand ModalCommand { get; }
         #endregion
 
@@ -16,6 +17,10 @@ namespace BaseXamarinForms.ViewModels
         {
             ModalCommand = new Command(Modal);
         }
+
+        
+
+   
         #endregion
 
 
